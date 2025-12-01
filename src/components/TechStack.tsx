@@ -8,6 +8,7 @@ import ReactIcon from "../static/react.png";
 import SpringBootIcon from "../static/springboot.png";
 import TypeScriptIcon from "../static/typescript.png";
 import GitIcon from "../static/git.png";
+import GitHubActionsIcon from "../static/githubactions.png";
 
 export default function TechStack() {
   const iconWidth = 40;
@@ -49,6 +50,12 @@ export default function TechStack() {
         height={iconWidth}
       />
       <img src={GitIcon} alt="Git" width={iconWidth} height={iconWidth} />
+      <img
+        src={GitHubActionsIcon}
+        alt="GitHub Actions"
+        width={iconWidth}
+        height={iconWidth}
+      />
     </Box>
   );
 }
