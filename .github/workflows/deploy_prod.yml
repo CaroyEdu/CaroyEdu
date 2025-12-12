@@ -15,30 +15,32 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
+
       - name: Install dependencies
         run: npm install
+
       - name: Build project
         run: npm run build
-      - name: Set CNAME dynamically
+
+      - name: Set CNAME for prod
         run: echo "roycaroje.com" > dist/CNAME
+
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+
   deploy:
     needs: build
-    permissions:
-      pages: write
-      id-token: write
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
-      - name: Deploy to prod
+      - name: Deploy to PROD
         id: deployment
         uses: actions/deploy-pages@v4.0.5
