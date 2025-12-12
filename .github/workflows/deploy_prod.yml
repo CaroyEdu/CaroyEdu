@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages on Release
+name: Deploy to Production
 
 on:
   release:
@@ -37,6 +37,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy to prod
         id: deployment
         uses: actions/deploy-pages@v4.0.5
+        with:
+          artifact_path: dist
+          cname: roycaroje.com
