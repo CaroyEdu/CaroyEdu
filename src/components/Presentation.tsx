@@ -1,8 +1,9 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
 import TechStack from "./TechStack";
 import me from "../static/me.jpg";
+import SocialMedia from "./SocialMedia";
 
 function Presentation() {
   return (
@@ -10,7 +11,7 @@ function Presentation() {
       container
       sx={{
         paddingTop: { xs: 2, md: 8 },
-        paddingBottom: { xs: 4, md: 8 },
+        paddingBottom: { xs: 4, md: 4 },
       }}
     >
       <Grid
@@ -21,17 +22,20 @@ function Presentation() {
           alignItems: "center",
         }}
       >
-        <Avatar
-          alt="Jean Edouard Roy Caro Picture"
-          src={me}
-          sx={{
-            width: 350,
-            height: 350,
-            boxShadow: 4,
-            border: "3px solid",
-            borderColor: "secondary.main",
-          }}
-        />
+        <Stack direction="column">
+          <Avatar
+            alt="Jean Edouard Roy Caro Picture"
+            src={me}
+            sx={{
+              width: 350,
+              height: 350,
+              boxShadow: 4,
+              border: "3px solid",
+              borderColor: "secondary.main",
+            }}
+          />
+          <SocialMedia />
+        </Stack>
       </Grid>
       <Grid size={{ xs: 12, md: 8 }} alignItems="center">
         <Box paddingLeft={{ xs: 0, md: 5 }}>
