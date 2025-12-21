@@ -22,12 +22,16 @@ function Footer() {
         px: 2,
       }}
     >
-      <Grid container alignItems="center">
-        <Grid size={4} display="flex" justifyContent="flex-start">
+      <Grid container alignItems="center" spacing={{ xs: 2 }}>
+        <Grid
+          size={{ xs: 12, md: 4 }}
+          display="flex"
+          justifyContent={{ xs: "center", md: "flex-start" }}
+        >
           <SocialMedia />
         </Grid>
         <Grid
-          size={4}
+          size={{ xs: 12, md: 4 }}
           display="flex"
           justifyContent="center"
           alignItems="center"
@@ -45,7 +49,11 @@ function Footer() {
           <MailIcon fontSize="small" />
           <Typography variant="body2">roycaroje@gmail.com</Typography>
         </Grid>
-        <Grid size={4} display="flex" justifyContent="flex-end">
+        <Grid
+          size={{ xs: 12, md: 4 }}
+          display="flex"
+          justifyContent={{ xs: "center", md: "flex-end" }}
+        >
           <Button
             variant="contained"
             startIcon={<DownloadIcon />}

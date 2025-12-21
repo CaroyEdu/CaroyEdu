@@ -5,7 +5,6 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
-import ComputerIcon from "@mui/icons-material/Computer";
 
 interface AppProps {
   toggleTheme: () => void;
@@ -18,7 +17,7 @@ export default function ButtonAppBar({ toggleTheme, isDark }: AppProps) {
       <AppBar position="static">
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <Box sx={{ display: "flex", gap: 2 }}>
-            <ComputerIcon />
+            <img src="./logo.svg" width="25" />
             <Typography sx={{ fontWeight: 700 }}>
               Jean Edouard Roy Caro
             </Typography>
