@@ -3,15 +3,14 @@ import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
 import TechStack from "./TechStack";
 import me from "../static/me.jpg";
-import SocialMedia from "./SocialMedia";
 
 function Presentation() {
   return (
     <Grid
       container
       sx={{
-        paddingTop: { xs: 2, md: 8 },
-        paddingBottom: { xs: 4, md: 4 },
+        paddingTop: { xs: 2, md: 4 },
+        paddingBottom: { xs: 2, md: 4 },
       }}
     >
       <Grid
@@ -34,7 +33,6 @@ function Presentation() {
               borderColor: "secondary.main",
             }}
           />
-          <SocialMedia />
         </Stack>
       </Grid>
       <Grid size={{ xs: 12, md: 8 }} alignItems="center">

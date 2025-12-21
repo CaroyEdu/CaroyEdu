@@ -4,7 +4,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 
 export default function SocialMedia() {
-  const iconSize = 40;
+  const iconSize = 30;
 
   const socialLinks = [
     {
@@ -25,14 +25,7 @@ export default function SocialMedia() {
   ];
 
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      gap={3}
-      mt={3}
-      flexWrap="wrap"
-    >
+    <Box>
       {socialLinks.map(({ icon, url, label }) => (
         <IconButton
           key={label}
@@ -40,7 +33,6 @@ export default function SocialMedia() {
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={label}
         >
           {icon}
         </IconButton>
