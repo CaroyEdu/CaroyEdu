@@ -45,6 +45,10 @@ function Presentation() {
             sx={{
               letterSpacing: "-0.02em",
               lineHeight: 1.1,
+              fontSize: {
+                xs: "3.25rem",
+                md: "3.75rem",
+              },
             }}
           >
             {t("title")}
