@@ -19,7 +19,7 @@ export default function SocialMedia() {
     },
     {
       icon: <TwitterIcon sx={{ fontSize: iconSize }} />,
-      url: "https://twitter.com/caroydev",
+      url: "https://twitter.com/roycaroje",
       label: "Twitter",
     },
   ];
