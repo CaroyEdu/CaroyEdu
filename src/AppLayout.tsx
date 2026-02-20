@@ -19,12 +19,10 @@ function AppLayout({ toggleTheme, isDark, children }: AppLayoutProps) {
     >
       {/* Header */}
       <AppBar toggleTheme={toggleTheme} isDark={isDark} />
-
       {/* Main content */}
       <Box component="main" sx={{ flexGrow: 1 }}>
         {children}
       </Box>
-
       {/* Footer */}
       <Footer />
     </Box>
